@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Home Page</title>
 
-<head>
-  <title>Home Page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
+  </head>
 
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
-</head>
+  <body>
+    <section class="login-and-signup">
 
-<body>
-  <h1>Have fun! 🥔</h1>
-</body>
+      <form action="/login" method="post">
+        <div>
+          <label for="Email">Email</label>
+          <input type="text" id="login-email" name="Email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="login-password" name="password" />
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
 
+      <form action="/signup" method="post">
+        <div>
+          <label for="Email">Email</label>
+          <input type="text" id="signup-email" name="Email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="signup-password" name="password" />
+        </div>
+        <div>
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+
+    </section>
+  </body>
 </html>
