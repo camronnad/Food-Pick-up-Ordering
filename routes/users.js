@@ -8,8 +8,13 @@
 const express = require('express');
 const router  = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('users');
-}); 
+router.post('/login', (req, res) => {
+  res.redirect('/users/user');
+});
+
+router.get('/user', (req, res) => {
+  res.render('user'); // this would render your 'users.ejs' file
+});
+
 
 module.exports = router;

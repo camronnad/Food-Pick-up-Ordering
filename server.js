@@ -32,6 +32,8 @@ const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
 
+
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
@@ -47,10 +49,6 @@ app.use('/users', usersRoutes);
 app.get('/', (req, res) => {
   res.render('guest');
 });
-
-app.get('/', (req,res) => {
-  res.render('user');
-})
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
