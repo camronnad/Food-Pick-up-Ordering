@@ -1,4 +1,4 @@
-body {
+.guest-page {
 
     background-image: url('/img/background-login-page.jpg');
     background-repeat: no-repeat;
@@ -10,6 +10,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 .login-and-signup {
   display: flex;
   flex-direction: column;
@@ -20,6 +22,7 @@ body {
   position: relative;
   top: 165px;
   right: 325px;
+  font-weight: bolder;
 }
 
 

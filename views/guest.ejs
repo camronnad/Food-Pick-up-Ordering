@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title>SkipThePlates</title>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,16 +16,16 @@
     <script defer src="/scripts/app.js"></script>
   </head>
 
-  <body>
+  <body class="guest-page">
     <section class="login-and-signup">
 
-      <form action="/login" method="post">
+      <form action="/users/login" method="post">
         <div>
-          <label for="Email">Email</label>
+          <label for="Email">Email:</label>
           <input type="text" id="login-email" name="Email" />
         </div>
         <div>
-          <label for="password">Password</label>
+          <label for="password">Password:</label>
           <input type="password" id="login-password" name="password" />
         </div>
         <div>
