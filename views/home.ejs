@@ -12,9 +12,15 @@
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
     <link rel="stylesheet" href="/styles/home.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/cart-popup.css" />
 
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
@@ -23,50 +29,105 @@
   <body>
     <header class="header-container">
       <div class="image-container">
-      <img src="/img/background-home-page.jpg" width="1500px" height="500px">
-      <button class="logout-btn">Logout</button>
-      <div>
-        <i class="fas fa-shopping-cart" ></i>
+        <img
+          src="/img/background-home-page.jpg"
+          width="1500px"
+          height="500px"
+        />
+        <button class="logout-btn">Logout</button>
+        <i class="fas fa-shopping-cart"></i>
+        <div class="cart">
 
-      </div>
+          <div class="cart-popup"> <h1>Items</h1> </div>
+          
+
+        </div>
         <div class="search-container">
           <form action="/menu">
-            <input type="text" placeholder="SEARCH MENU ITEMS" name="SEARCH"  >
+            <input type="text" placeholder="SEARCH MENU ITEMS" name="SEARCH" />
             <button class="icon-button">
               <i class="bi bi-arrow-up-circle-fill"></i>
             </button>
-
           </form>
         </div>
       </div>
-      </header>
+    </header>
 
-      <div class="favorite-container">
-        <h2 class="favorite-text">Our Favorites</h2>
+    <div class="favorite-container">
+      <h2 class="favorite-text">Our Favorites</h2>
+    </div>
+
+    <div class="flex-container">
+      <div>
+        <img src="/img/favorites-burger.jpg" width="230px" height="230px" />
+        <p class="favorite-food">
+          CLASSIC BURGER <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
       </div>
+      <div>
+        <img
+          src="/img/favorites-brisket.jpg"
+          width="250px"
+          height="250px"
+          style="margin-left: 13px"
+        />
+        <p class="favorite-food">
+          THE BRISKET <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div>
+        <img src="/img/favorites-lamb.jpg" width="250px" height="250px" />
+        <p class="favorite-food">
+          LAMB SOUVLAKI <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+    </div>
 
-<div class="flex-container">
-  <div><img src="/img/favorites-burger.jpg" width="230px" height="230px"><p class="favorite-food">CLASSIC BURGER  <i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div><img src="/img/favorites-brisket.jpg" width="250px" height="250px" style="margin-left: 13px"><p class="favorite-food">THE BRISKET <i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div><img src="/img/favorites-lamb.jpg" width="250px" height="250px"><p class="favorite-food">LAMB SOUVLAKI <i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-</div>
+    <div class="allItems-container">
+      <h2 class="all-items">ALL ITEMS</h2>
+    </div>
 
-<div class="allItems-container">
-  <h2 class="all-items">ALL ITEMS</h2>
-</div>
-
-<div class="grid-container">
-  <div class="grid-item"><p>PIZZA MARGHERITA<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>CHICKEN CEASAR SALAD<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>FAJITAS<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>LOBSTER BISQUE<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>VEGETABLE STIR FRY<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>CHICKEN ALFREDO<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>BEEF TACOS<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-</div>
-
+    <div class="grid-container">
+      <div class="grid-item">
+        <p>
+          PIZZA MARGHERITA<i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+      </div>
+      <div class="grid-item">
+        <p>
+          CHICKEN CEASAR SALAD<i
+            class="fa fa-plus-circle"
+            aria-hidden="true"
+          ></i>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>FAJITAS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+      </div>
+      <div class="grid-item">
+        <p>
+          LOBSTER BISQUE<i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          VEGETABLE STIR FRY<i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          CHICKEN ALFREDO<i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>BEEF TACOS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+      </div>
+      <div class="grid-item">
+        <p>PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+      </div>
+    </div>
   </body>
-
 </html>
