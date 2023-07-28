@@ -21,44 +21,9 @@ router.get('/', (req, res) => {
     });
 });
 
-
-router.get('/home', (req, res) => {
-  userQueries.getMenu()
-    .then(menuItems => {
-      res.json({ menuItems });
-
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .json({ error: err.message });
-    });
-});
-
-router.get('/order', (req, res) => {
-  userQueries.getOrders()
-    .then(orderItems => {
-      res.json({ orderItems });
-
-    })
-    .catch(err => {
-      console.log(err);
-      res
-        .status(500)
-        .json({ error: err.message });
-    });
-});
-
-router.post('/order',(req, res) => {
-  // click on ordernow button
-  //send sms to restaurant
-  //
-})
-
 router.post('/login', (req, res) => {
   res.render('home');
 });
-
 
 
 

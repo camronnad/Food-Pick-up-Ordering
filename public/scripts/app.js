@@ -1,10 +1,10 @@
+
 $( document ).ready(function() {
   $('logout-btn').click(function(){
     window.location.href = '/';
   })
-});
-
-$( document ).ready(function() {
+  
+  $( document ).ready(function() {
   $('btn-btn-primary').click(function(){
 
         $(".orderButton").toggleClass("active");
@@ -30,3 +30,8 @@ $( document ).ready(function() {
         });
       });
     })
+
+
+
+
+
