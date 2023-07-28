@@ -29,6 +29,7 @@
 
     <script type="text/javascript" src="scripts/order.js"></script>
     <script src="/vendor/jquery-3.0.0.js"></script>
+    <script src="/scripts/order.js"></script>
     <script defer src="/scripts/app.js"></script>
     <script type="text/javascript" src="scripts/home.js"></script>
   </head>
@@ -87,11 +88,17 @@
     <div class="favorite-container">
       <h2 class="favorite-text">Our Favorites</h2>
     </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <p>Order confirmed</p>
+      </div>
+    </div>
 
     <div class="flex-container">
       <div>
         <img src="/img/favorites-burger.jpg" width="230px" height="230px" />
-        <p class="favorite-food">
+        <p class="favorite-food" data-item-id="classic-burger">
           CLASSIC BURGER <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
@@ -102,13 +109,13 @@
           height="250px"
           style="margin-left: 13px"
         />
-        <p class="favorite-food">
+        <p class="favorite-food" data-item-id="the-brisket">
           THE BRISKET <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div>
         <img src="/img/favorites-lamb.jpg" width="250px" height="250px" />
-        <p class="favorite-food">
+        <p class="favorite-food" data-item-id="lamb-souvlaki">
           LAMB SOUVLAKI <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
@@ -121,45 +128,43 @@
 
     <div class="grid-container">
       <div class="grid-item">
-        <p>
+        <p data-item-id="pizza-margherita">
           PIZZA MARGHERITA<i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div class="grid-item">
-        <p>SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <p data-item-id="salmon-fillet">SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
       </div>
       <div class="grid-item">
-        <p>
-          CHICKEN CEASAR SALAD<i
-            class="fa fa-plus-circle"
-            aria-hidden="true"
-          ></i>
+        <p data-item-id="chicken-ceasar-salad">
+          CHICKEN CEASAR SALAD<i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div class="grid-item">
-        <p>FAJITAS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <p data-item-id="fajitas">FAJITAS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
       </div>
       <div class="grid-item">
-        <p>
+        <p data-item-id="lobster-bisque">
           LOBSTER BISQUE<i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div class="grid-item">
-        <p>
+        <p data-item-id="vegetable-stir-fry">
           VEGETABLE STIR FRY<i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div class="grid-item">
-        <p>
+        <p data-item-id="chicken-alfredo">
           CHICKEN ALFREDO<i class="fa fa-plus-circle" aria-hidden="true"></i>
         </p>
       </div>
       <div class="grid-item">
-        <p>BEEF TACOS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <p data-item-id="beef-tacos">BEEF TACOS<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
       </div>
       <div class="grid-item">
-        <p>PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+        <p data-item-id="pad-thai">PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p>
       </div>
     </div>
   </body>
 </html>
+

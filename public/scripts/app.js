@@ -3,7 +3,7 @@ $( document ).ready(function() {
   $('logout-btn').click(function(){
     window.location.href = '/';
   })
-  
+
   $( document ).ready(function() {
   $('btn-btn-primary').click(function(){
 
@@ -35,3 +35,21 @@ $( document ).ready(function() {
 
 
 
+  $(document).click(function () {
+    $(".cart-popup").css("display", "none");
+  });
+});
+
+$(document).ready(function() {
+  // Initialize an empty cart
+  let cart = [];
+  // When an "Order Now" button is clicked...
+  $(".order-now").click(function() {
+    const itemId = $(this).parent().data('item-id');
+    //...
+    // Add the item ID to the cart
+    cart.push(itemId);
+
+    console.log(cart);
+  });
+});

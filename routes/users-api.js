@@ -56,7 +56,7 @@ router.post('/order',(req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  res.render('home');
+  res.render('home', );
 });
 
 

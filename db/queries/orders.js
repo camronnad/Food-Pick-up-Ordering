@@ -9,10 +9,17 @@ const getOrders = () => {
 };
 
 // Add a new order. This will require a user id and will insert the current timestamp into 'created_time'.
-const addOrder = (userId) => {
-  return db.query('INSERT INTO orders(user_id, created_time) VALUES($1, NOW()) RETURNING *;', [userId])
+const addOrder = () => {
+  return db.query('INSERT INTO orders(user_id, created_time) VALUES(1, NOW()) RETURNING *;') //userId hardcoded as 1
     .then(data => {
       return data.rows[0];
+    });
+};
+
+const getMenuItems = () => {
+  return db.query('SELECT * FROM menu;')
+    .then(data => {
+      return data.rows;
     });
 };
 
@@ -37,4 +44,4 @@ const updateItemInOrder = (orderId, orderItemId, menuItemId, quantity) => {
 
 
 
-module.exports = { getOrders, addOrder, addItemToOrder, updateItemInOrder };
+module.exports = { getOrders, addOrder, getMenuItems, addItemToOrder, updateItemInOrder };

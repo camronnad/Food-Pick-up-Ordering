@@ -19,8 +19,10 @@ router.get('/', (req, res) => {
 });
 
 // Endpoint to add a new order
-router.post('/', (req, res) => {
-  orderQueries.addOrder(req.body) // This function needs to be defined in your 'orderQueries' module
+router.post('/newOrder', (req, res) => {
+  console.log("req.body:", req.body)
+  orderQueries.addOrder()
+ // This function needs to be defined in your 'orderQueries' module
     .then(order => {
       res.json({ order });
     })
