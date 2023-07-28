@@ -1,0 +1,35 @@
+// cart {
+//   position: relative;
+// }
+
+
+
+
+// .cart-popup {
+//   justify-content: center;
+//   width: 250px;
+//   height: 400px;
+//   background-color: white;
+//   display: none;
+//   border: 3px solid black;
+//   position: absolute;
+//   left: 1170px;
+//   z-index: 9999;
+//   bottom: 32px;
+// }
+
+.cart-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  z-index: 9999;
+}
+
+.cart-popup.active {
+  display: block;
+}

@@ -7,29 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
     <link rel="stylesheet" href="/vendor/border-box.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
     <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/cart-popup.css" />
+
+<!-- Add these links to your head section -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <!---     extra added to check modal box             -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
 
-
+    <script type="text/javascript" src="scripts/order.js"></script>
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/home.js"></script>
   </head>
 
   <body>
     <header class="header-container">
       <div class="image-container">
-      <img src="/img/background-home-page.jpg" width="1500px" height="500px">
-      <button class="logout-btn">Logout</button>
-      <div>
-        <i class="fas fa-shopping-cart" ></i>
+        <img
+          src="/img/background-home-page.jpg"
+          width="1345px"
+          height="500px"
+        />
+        <button class="logout-btn"><a href="/">Logout</a></button>
 
-      </div>
-        <div class="search-container">
+
+          <!---cart container-->
+          <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+                <div id="cartIcon">
+                  <h4 class= "title">Your Cart</h4>
+
+
+                <div class="cart-popup" id="cartPopup">
+                  <table>
+                    <thead class="orderContainer">
+                      <!-- <tr>
+                        <th>Order ID</th>
+                        <th>User ID</th>
+                        <th>Menu Name</th>
+                        <th>Price</th>
+                      </tr> -->
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+
+
+                <div class="orderButton">
+                  <button class="btn btn-primary" id="orderBtn">ORDER NOW</button>
+
+                </div>
+              </div>
+            <div class="search-container">
           <form action="/menu">
             <input type="text" placeholder="SEARCH MENU ITEMS" name="SEARCH"  >
             <button class="icon-button">
@@ -55,16 +97,18 @@
   <h2 class="all-items">ALL ITEMS</h2>
 </div>
 
-<div class="grid-container">
-  <div class="grid-item"><p>PIZZA MARGHERITA<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
+<div class="menu-container">
+  <div class="menuItems">
+  <!-- <div class="menuItem"><p>PIZZA MARGHERITA<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
+  <div class="menuItem"><p>SALMON FILLET<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>CHICKEN CEASAR SALAD<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>FAJITAS<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>LOBSTER BISQUE<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>VEGETABLE STIR FRY<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>CHICKEN ALFREDO<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
   <div class="grid-item"><p>BEEF TACOS<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
-  <div class="grid-item"><p>PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div>
+  <div class="grid-item"><p>PAD THAI<i class="fa fa-plus-circle" aria-hidden="true"></i></p></div> -->
+</div>
 </div>
 
   </body>
