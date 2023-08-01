@@ -21,6 +21,19 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/home', (req, res) => {
+  userQueries.getMenu()
+    .then(menuItems => {
+      res.json({ menuItems });
+
+    })
+    .catch(err => {
+      res
+        .status(500)
+        .json({ error: err.message });
+    });
+});
+
 
 router.get('/home', (req, res) => {
   userQueries.getMenu()

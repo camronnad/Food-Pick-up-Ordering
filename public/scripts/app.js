@@ -31,6 +31,50 @@ $( document ).ready(function() {
       });
     })
 
+    // Function to handle the plus button click
+function increaseQuantity(item) {
+  const quantityElement = item.querySelector("span");
+  let quantity = parseInt(quantityElement.innerText);
+  quantity++;
+  quantityElement.innerText = quantity;
+}
+
+// Function to handle the minus button click
+function decreaseQuantity(item) {
+  const quantityElement = item.querySelector("span");
+  let quantity = parseInt(quantityElement.innerText);
+  if (quantity > 0) {
+    quantity--;
+    quantityElement.innerText = quantity;
+  }
+}
+
+// Event listeners to plus and minus buttons
+const plusButtons = document.querySelectorAll(".fa-plus-circle");
+const minusButtons = document.querySelectorAll(".fa-minus-circle");
+
+plusButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const parentItem = button.parentElement;
+    increaseQuantity(parentItem);
+  });
+});
+
+minusButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const parentItem = button.parentElement;
+    decreaseQuantity(parentItem);
+  });
+});
+
+function submitOrder() {
+  // Your order submission logic here
+  alert("Your order has been submitted!");
+  // Show the cart container when the order is submitted
+  const cartContainer = document.querySelector(".fas fa-shopping-cart");
+  cartContainer.style.display = "block";
+  };
+
 
 
 

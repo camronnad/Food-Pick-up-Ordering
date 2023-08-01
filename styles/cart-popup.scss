@@ -1,13 +1,16 @@
 .cart-popup {
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 265px;
+  right: 1px;
+  left: 1260px;
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   padding: 20px;
   border: 1px solid #888;
   z-index: 9999;
+  height: 350px;
+  width: 250px
 }
 
 .cart-popup.active {

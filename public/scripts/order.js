@@ -12,24 +12,31 @@
     // => renderMenu
 
 // Test / driver code (temporary). Eventually will get this from the server.
-$(document).ready(function() {
-  $(".cart").click(function() {
+$(document).ready(function () {
+  $(".fa-shopping-cart").click(function (event) {
+    event.stopPropagation();
+    $(".cart-popup").toggle();
+  });
 
-    $(".cart-popup").toggleClass("active");
+  $(document).click(function () {
+    $(".cart-popup").css("display", "none");
+  });
+
   //loadOrder function removed here
 
-    $.ajax({
-      url: "/api/users/order",
-      method: "GET",
-      dataType: "json",
-      success: function(orderItems) {
-       renderOrder(orderItems);
-      },
-      error: function(error) {
-        $('#order-container').html('<p class="error-msg">Error loading order. Please try again later.</p>');
-      }
-    });
+  $.ajax({
+    url: "/api/users/order",
+    method: "GET",
+    dataType: "json",
+    success: function(orderItems) {
+      renderOrder(orderItems);
+    },
+    error: function(error) {
+      $('#order-container').html('<p class="error-msg">Error loading order. Please try again later.</p>');
+    }
+
   });
+
 
 
 

@@ -16,8 +16,8 @@ const addOrder = () => {
     });
 };
 
-const getMenuItems = () => {
-  return db.query('SELECT * FROM menu;')
+const getMenu = () => {
+  return db.query('SELECT name FROM menu;')
     .then(data => {
       return data.rows;
     });
@@ -44,4 +44,4 @@ const updateItemInOrder = (orderId, orderItemId, menuItemId, quantity) => {
 
 
 
-module.exports = { getOrders, addOrder, getMenuItems, addItemToOrder, updateItemInOrder };
+module.exports = { getOrders, addOrder, getMenu, addItemToOrder, updateItemInOrder };
